@@ -92,6 +92,7 @@
     </h2>
 
     <div class="grid md:grid-cols-3 gap-8">
+
         <div class="glass p-8 rounded-3xl text-center">
             <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
             <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
@@ -108,22 +109,291 @@
             </p>
         </div>
 
-        <!-- EMBEDDED VIDEO SECTION -->
+        <!-- LIVE DEMO (Thumbnail Version – No Errors) -->
         <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
             <h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">
                 Live Demo
             </h3>
-            <iframe 
-                width="100%" 
-                height="200"
-                src="https://www.youtube.com/embed/4KkvLe-RyhY"
-                title="GPU Allocation System Demo"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                class="rounded-xl">
-            </iframe>
+
+            <a href="https://youtu.be/4KkvLe-RyhY" target="_blank" class="block relative group">
+                
+                <img src="youtube.jpeg"
+                     alt="GPU Allocation System Demo"
+                     class="rounded-xl w-full h-48 object-cover opacity-90 group-hover:opacity-100 transition">
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                        <i class="fab fa-youtube text-white text-3xl"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- AUTHENTICATION & SYSTEM WORKFLOW -->
+<section class="space-y-12">
+    <h2 class="text-4xl font-black text-center uppercase tracking-tight">
+        System <span class="text-purple-500">Workflow & Authentication</span>
+    </h2>
+
+    <div class="glass p-10 rounded-[2.5rem] border-l-4 border-purple-600">
+        <h3 class="text-2xl font-extrabold mb-6">Secure Login & Role-Based Access</h3>
+        <p class="text-slate-400 leading-relaxed text-justify mb-8">
+            The system implements secure authentication with role-based access control.
+            Users must log in before accessing the platform. Based on their assigned role
+            (Student or Admin), they are redirected to separate dashboards with specific privileges.
+            This ensures controlled access to GPU resources and administrative functions.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="glass p-6 rounded-3xl text-center border border-blue-500/20">
+                <i class="fas fa-user-graduate text-blue-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-blue-400">
+                    Student Login
+                </h4>
+                <p class="text-sm text-slate-500">
+                    Students sign in using registered credentials. 
+                    They can submit GPU requests, view request history,
+                    track approval status, and request extensions.
+                </p>
+            </div>
+
+            <div class="glass p-6 rounded-3xl text-center border border-purple-500/20">
+                <i class="fas fa-user-shield text-purple-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-purple-400">
+                    Admin Login
+                </h4>
+                <p class="text-sm text-slate-500">
+                    Admins log in through a secured portal with elevated privileges.
+                    They can review pending requests, approve/reject allocations,
+                    manage extension requests, and monitor GPU utilization.
+                </p>
+            </div>
+
+            <div class="glass p-6 rounded-3xl text-center border border-green-500/20">
+                <i class="fas fa-lock text-green-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-green-400">
+                    Session & Security
+                </h4>
+                <p class="text-sm text-slate-500">
+                    Authentication uses secure API endpoints with controlled access.
+                    Only authorized users can perform privileged operations,
+                    preventing misuse of GPU resources.
+                </p>
+            </div>
+
         </div>
     </div>
 </section>
 
+<!-- COMPLETE SYSTEM FLOW -->
+<section class="space-y-12">
+    <h2 class="text-4xl font-black text-center uppercase tracking-tight">
+        Complete <span class="text-blue-500">System Flow</span>
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-8">
+
+        <div class="glass p-6 rounded-3xl text-center">
+            <i class="fas fa-sign-in-alt text-blue-500 text-2xl mb-3"></i>
+            <p class="text-sm text-slate-400">
+                User logs in → Role identified → Dashboard loaded
+            </p>
+        </div>
+
+        <div class="glass p-6 rounded-3xl text-center">
+            <i class="fas fa-file-alt text-purple-500 text-2xl mb-3"></i>
+            <p class="text-sm text-slate-400">
+                Student submits GPU request with duration & priority
+            </p>
+        </div>
+
+        <div class="glass p-6 rounded-3xl text-center">
+            <i class="fas fa-clipboard-check text-yellow-400 text-2xl mb-3"></i>
+            <p class="text-sm text-slate-400">
+                Admin reviews → Approves / Rejects request
+            </p>
+        </div>
+
+        <div class="glass p-6 rounded-3xl text-center">
+            <i class="fas fa-sync-alt text-green-500 text-2xl mb-3"></i>
+            <p class="text-sm text-slate-400">
+                Extension requests follow separate approval workflow
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- EXTENSION FEATURE SECTION -->
+<section class="space-y-12">
+    <h2 class="text-4xl font-black text-center uppercase tracking-tight">
+        Advanced <span class="text-purple-500">Extension Workflow</span>
+    </h2>
+
+    <div class="glass p-10 rounded-[2.5rem] border-l-4 border-purple-600">
+        <h3 class="text-2xl font-extrabold mb-6">New Feature: Controlled GPU Time Extension</h3>
+        <p class="text-slate-400 leading-relaxed text-justify mb-6">
+            In real-world GPU labs, students often require additional computation time for long-running AI training processes.
+            Instead of allowing automatic renewal, our system introduces an approval-based extension workflow to maintain
+            fairness, transparency, and administrative control over limited GPU resources.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+
+            <div class="glass p-6 rounded-3xl text-center border border-purple-500/20">
+                <i class="fas fa-user-clock text-purple-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-purple-400">
+                    Step 1: Student Requests Extension
+                </h4>
+                <p class="text-sm text-slate-500">
+                    The student submits an extension request specifying additional hours.
+                    The system flags the request using <code>extensionRequested</code> 
+                    and stores requested hours securely in the database.
+                </p>
+            </div>
+
+            <div class="glass p-6 rounded-3xl text-center border border-blue-500/20">
+                <i class="fas fa-shield-alt text-blue-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-blue-400">
+                    Step 2: Admin Review & Approval
+                </h4>
+                <p class="text-sm text-slate-500">
+                    The admin dashboard dynamically detects extension requests and 
+                    moves them into the "Pending Review" section. The admin can approve
+                    or reject based on system load and GPU availability.
+                </p>
+            </div>
+
+            <div class="glass p-6 rounded-3xl text-center border border-green-500/20">
+                <i class="fas fa-check-circle text-green-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-green-400">
+                    Step 3: Controlled Allocation Update
+                </h4>
+                <p class="text-sm text-slate-500">
+                    Only after admin approval does the system increase <code>durationHours</code>.
+                    Extension flags are reset automatically, ensuring controlled GPU utilization.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SYSTEM FEATURES SECTION -->
+<section class="space-y-12">
+    <h2 class="text-4xl font-black text-center uppercase tracking-tight">
+        Key <span class="text-blue-500">System Features</span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="glass p-8 rounded-3xl text-center">
+            <i class="fas fa-users-cog text-blue-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">
+                Role-Based Access Control
+            </h3>
+            <p class="text-sm text-slate-500">
+                Separate dashboards for Students and Admins with secure authentication and authorization.
+            </p>
+        </div>
+
+        <div class="glass p-8 rounded-3xl text-center">
+            <i class="fas fa-balance-scale text-purple-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">
+                Priority-Based Scheduling
+            </h3>
+            <p class="text-sm text-slate-500">
+                Requests are categorized into Low, Medium, and High priority to ensure fair GPU allocation.
+            </p>
+        </div>
+
+        <div class="glass p-8 rounded-3xl text-center">
+            <i class="fas fa-chart-line text-green-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">
+                Real-Time Monitoring
+            </h3>
+            <p class="text-sm text-slate-500">
+                Live GPU utilization tracking and activity logging for transparency and performance monitoring.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- FUTURE SCOPE SECTION -->
+<section class="space-y-12">
+    <h2 class="text-4xl font-black text-center uppercase tracking-tight">
+        Future <span class="text-purple-500">Scope</span>
+    </h2>
+
+    <div class="glass p-10 rounded-[2.5rem] border-l-4 border-purple-600">
+        <p class="text-slate-400 leading-relaxed text-justify mb-10">
+            While the current system efficiently manages GPU allocation with approval-based control,
+            it can be further enhanced with intelligent automation, scalability mechanisms,
+            and real-time resource optimization techniques.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="glass p-6 rounded-3xl text-center border border-blue-500/20">
+                <i class="fas fa-random text-blue-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-blue-400">
+                    Auto GPU Load Balancing
+                </h4>
+                <p class="text-sm text-slate-500">
+                    Implement intelligent load-balancing algorithms that automatically assign 
+                    GPU resources based on real-time utilization, reducing manual intervention 
+                    and improving performance efficiency.
+                </p>
+            </div>
+
+            <div class="glass p-6 rounded-3xl text-center border border-green-500/20">
+                <i class="fas fa-envelope text-green-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-green-400">
+                    Email Notifications
+                </h4>
+                <p class="text-sm text-slate-500">
+                    Integrate automated email alerts for request approvals, rejections, 
+                    extension decisions, and GPU release reminders to improve communication 
+                    between students and administrators.
+                </p>
+            </div>
+
+            <div class="glass p-6 rounded-3xl text-center border border-yellow-500/20">
+                <i class="fas fa-coins text-yellow-400 text-2xl mb-4"></i>
+                <h4 class="font-bold text-xs uppercase tracking-widest mb-2 text-yellow-400">
+                    Usage-Based Billing
+                </h4>
+                <p class="text-sm text-slate-500">
+                    Introduce usage-based billing or credit tracking mechanisms for 
+                    advanced GPU consumption monitoring, enabling fair cost distribution 
+                    in shared research environments.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<script>
+let sec = 0;
+let timer = null;
+function startTimer() {
+    timer = setInterval(() => {
+        sec++;
+        let m = Math.floor(sec / 60);
+        let s = sec % 60;
+        document.getElementById('displayTime').innerText =
+            `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+        if (sec >= 600) clearInterval(timer);
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
